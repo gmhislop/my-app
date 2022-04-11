@@ -1,26 +1,30 @@
 import React from 'react';
 import './App.css';
-import Home from './Home'
-import Match from './Match';
-import Caregivers from './Caregivers';
-import Contact from './Contact';
-import Bookings from './Bookings';
-import { Route ,BrowserRouter} from 'react-router-dom';
+import Home from './pages/Home'
+import Match from './pages/Match';
+import Caregivers from './pages/Caregivers';
+import Contact from './pages/Contact';
+import Bookings from './pages/Bookings';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Form from './Form';
 
 
 function App() {
   return (
-    <BrowserRouter>
-    <div className="App">
-      <Form />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/match" component={Match} />
-      <Route exact path="/caregivers" component={Caregivers} />
-      <Route exact path="/bookings" component={Bookings} />
-      <Route exact path="/contact" component={Contact} />
-    </div>
-    </BrowserRouter>
+    <>
+    <Router>
+      <Switch>
+      <Route path="/pages/caregivers" exact component={Caregivers} />
+      <Route path="/pages/bookings" component={Bookings} />
+      <Route path="/pages/login" exact component={Form} />
+      <Route path='./'/>     
+      <Route path=".pages/" exact component={Home} />
+      <Route path=".pages/match" component={Match} />
+      <Route path=".pages/contact" component={Contact} />
+      </Switch>
+    </Router>
+    </>
+    
   );
 }
 

@@ -27,16 +27,16 @@ function Bookings() {
                         <thead>
                             <tr>
                                 <th>Functie</th>
-                                <th>Address</th>
-                                <th>Time</th>
+                                <th>Afdeling</th>
+                                <th>Tijd</th>
                             </tr>
                         </thead>
                         <tbody>
                             {dummyData.map((val, key) => {
                                 return (
                                     <tr key={key}>
-                                        <td>{val.username}</td>
-                                        <td>{val.address.suite}</td>
+                                        <td>{val.jobTitleName}</td>
+                                        <td>{val.department}</td>
                                         <td>{'14:00-16:00'}</td>
                                     </tr>
                                 )

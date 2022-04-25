@@ -19,6 +19,7 @@ table, th, td {
 table {
     border-collapse: collapse;
     width: 100%;
+    border-radius: 10px;
 }
 
 td {

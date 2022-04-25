@@ -3,7 +3,7 @@ import * as AiIcons from "react-icons/ai";
 
 export const SidebarData = [
     {
-        title: 'Home',
+        title: 'Dashboard',
         path: '/',
         icon: <AiIcons.AiOutlineHome />,
         cName: 'nav-text'
@@ -11,7 +11,7 @@ export const SidebarData = [
     {
         title: 'Match',
         path: '/match',
-        icon: <AiIcons.AiOutlineBlock />,
+        icon: <AiIcons.MdOutlineDashboardCustomize />,
         cName: 'nav-text'
     },
     {

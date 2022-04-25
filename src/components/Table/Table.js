@@ -13,19 +13,16 @@ return (
 	<div className="Table">
 	<table>
 		<tr>
-		<th>Date</th>
-		<th>Organisation</th>
 		<th>Caregiver</th>
-    <th>Functie</th>
+   		<th>Function</th>
 		</tr>
 		{data.map((val, key) => {
 		return (
 			<tr key={key}>
-			<td>{val.date}</td>
-			<td>{val.nameOrg}</td>
-			<td>{val.name}</td>
-      <td>{val.function}</td>
-			</tr>
+		<td>{val.jobTitleName}</td>
+        <td>{val.preferredFullName}</td>
+        <td>{'14:00-16:00'}</td>
+		</tr>
 		)
 		})}
 	</table>

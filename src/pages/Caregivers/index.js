@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Navbar from '../../components/NavBar';
+import Navbar from '../../components/Navbar/index';
 import './index.css';
 
 
@@ -8,8 +8,8 @@ function Caregivers() {
     const [dummyData, setDummyData] = useState([]);
     useEffect(() =>{
         const fetchData = () =>{
-            fetch('https://jsonplaceholder.typicode.com/users')
-             .then(response => response.json())
+            fetch('https://my-caregiver-api.herokuapp.com/caregivers')
+            .then(response => response.json())
             .then(json => setDummyData(json))
         }
         fetchData();
@@ -27,15 +27,15 @@ function Caregivers() {
                         <thead>
                             <tr>
                                 <th>Caregiver</th>
-                                <th>Functie</th>
+                                <th>Function</th>
                             </tr>
                         </thead>
                         <tbody>
                             {dummyData.map((val, key) => {
                                 return (
                                     <tr key={key}>
-                                    <td>{val.name}</td>
-                                    <td>{val.username}</td>
+                                    <td>{val.preferredFullName}</td>
+                                    <td>{val.jobTitleName}</td>
                                     </tr>
                                 )
                             })}

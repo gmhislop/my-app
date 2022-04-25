@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Navbar from '../../components/NavBar';
+import Navbar from '../../components/Navbar/index';
 import './index.css';
 
 
@@ -8,7 +8,7 @@ function Bookings() {
     const [dummyData, setDummyData] = useState([]);
     useEffect(() =>{
         const fetchData = () =>{
-            fetch('https://jsonplaceholder.typicode.com/users')
+            fetch('https://git.heroku.com/bookings')
              .then(response => response.json())
             .then(json => setDummyData(json))
         }
@@ -26,7 +26,6 @@ function Bookings() {
                     <table>
                         <thead>
                             <tr>
-                                <th>Organisation</th>
                                 <th>Functie</th>
                                 <th>Address</th>
                                 <th>Time</th>
@@ -36,7 +35,6 @@ function Bookings() {
                             {dummyData.map((val, key) => {
                                 return (
                                     <tr key={key}>
-                                        <td>{val.company.name}</td>
                                         <td>{val.username}</td>
                                         <td>{val.address.suite}</td>
                                         <td>{'14:00-16:00'}</td>

@@ -8,8 +8,8 @@ function Bookings() {
     const [dummyData, setDummyData] = useState([]);
     useEffect(() =>{
         const fetchData = () =>{
-            fetch('https://git.heroku.com/bookings')
-             .then(response => response.json())
+            fetch('https://booking-data-project.herokuapp.com/Bookings/')
+            .then(response => response.json())
             .then(json => setDummyData(json))
         }
         fetchData();

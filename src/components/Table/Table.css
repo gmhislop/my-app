@@ -16,7 +16,10 @@ table {
   border-collapse: collapse;
   width: 100%;
   border-radius: 30px;
+  border-collapse:separate; 
+  border-spacing:5em;
 }
+
 
 th {
   font-size: 18px;
@@ -34,4 +37,4 @@ tr {
 
 tr:not(:first-child):hover {
   background-color: #0000ff;
-}
+} ;

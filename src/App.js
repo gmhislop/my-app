@@ -19,7 +19,7 @@ function App() {
       <Route path="/pages/login" exact component={Form} />
       <Route path='./'/>     
       <Route path=".pages/" exact component={Home} />
-      <Route path=".pages/match" component={Match} />
+      <Route path="/pages/match" component={Match} />
       <Route path=".pages/contact" component={Contact} />
       </Switch>
     </Router>

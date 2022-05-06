@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import Navbar from '../../components/Navbar/index';
-import './index.css';
 
 
 function Caregivers() {
@@ -26,16 +25,21 @@ function Caregivers() {
                     <table>
                         <thead>
                             <tr>
-                                <th>Caregiver</th>
-                                <th>Function</th>
+                                <th>Naam zorgverlener</th>
+                                <th>Functie</th>
+                                <th>Email</th>
+                                <th>Telefoonnummer</th>
                             </tr>
                         </thead>
                         <tbody>
                             {dummyData.map((val, key) => {
                                 return (
                                     <tr key={key}>
+                                    <td>{val.thumbnail}</td>    
                                     <td>{val.preferredFullName}</td>
                                     <td>{val.jobTitleName}</td>
+                                    <td>{val.email}</td>
+                                    <td>{val.phoneNumber}</td>
                                     </tr>
                                 )
                             })}

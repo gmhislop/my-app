@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  margin-bottom: 16px;
+}
+
+.tableDiv {
+  width: 70% ;
+}
+
+table, th {
+  border: 0px;
+}
+
+table {
+  width: 100%;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+
+td {
+  text-align: center;
+  border-radius: 10px;
+}
+
+.tableButton {
+  background-color: #0000ff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+tr {
+  background-color: #ffffff;
+  height: 50px;
+  box-shadow: 1px 1px 2px 2px #d0c9c9;
+}

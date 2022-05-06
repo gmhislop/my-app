@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Navbar from '../../components/Navbar/index';
-import './index.css';
+
 
 
 function Bookings() {
@@ -29,6 +29,7 @@ function Bookings() {
                                 <th>Functie</th>
                                 <th>Afdeling</th>
                                 <th>Tijd</th>
+                                <th>Datum</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,7 +38,8 @@ function Bookings() {
                                     <tr key={key}>
                                         <td>{val.jobTitleName}</td>
                                         <td>{val.department}</td>
-                                        <td>{'14:00-16:00'}</td>
+                                        <td>{val.time}</td>
+                                        <td>{val.date}</td>
                                     </tr>
                                 )
                             })}

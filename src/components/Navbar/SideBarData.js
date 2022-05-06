@@ -10,7 +10,7 @@ export const SidebarData = [
     },
     {
         title: 'Match',
-        path: '/match',
+        path: '/pages/match',
         icon: <AiIcons.MdOutlineDashboardCustomize />,
         cName: 'nav-text'
     },

@@ -52,12 +52,14 @@ function Match() {
                     <table>
                         <thead>
                             <tr>
+                                <th>Booking ID</th>
                                 <th>Caregivers Name</th>
                                 <th>Functie</th>
                                 <th>Afdeling</th>
+                                <th>Datum</th>
                                 <th>Tijd</th>
-                                <th>Booking ID</th>
                                 <th>Action</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -65,12 +67,12 @@ function Match() {
                                 return (
 
                                     <tr key={key} className="tableRow">
+                                        <td>{val.bookingId}</td>
                                         <td>{val.firstName + ' ' + val.lastName}</td>
                                         <td>{val.jobTitleName}</td>
                                         <td>{val.department}</td>
                                         <td>{val.date}</td>
                                         <td>{val.time}</td>
-                                        <td>{val.bookingId}</td>
                                         <button className='tableButton'>Confirm</button>
                                     </tr>
                                 )

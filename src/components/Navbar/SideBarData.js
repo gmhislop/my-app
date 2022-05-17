@@ -29,7 +29,7 @@ export const SidebarData = [
     },
     {
         title: 'Contact',
-        path: '/contact',
+        path: '/pages/contact',
         icon: <AiIcons.AiOutlineGlobal />,
         cName: 'nav-text'
     },

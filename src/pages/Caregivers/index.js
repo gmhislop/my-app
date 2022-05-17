@@ -25,6 +25,8 @@ function Caregivers() {
                     <table>
                         <thead>
                             <tr>
+                                <th>ID</th>
+                                <th>Foto</th>
                                 <th>Naam zorgverlener</th>
                                 <th>Functie</th>
                                 <th>Email</th>
@@ -35,6 +37,7 @@ function Caregivers() {
                             {dummyData.map((val, key) => {
                                 return (
                                     <tr key={key}>
+                                    <td>{val.userId}</td>    
                                     <td>{val.thumbnail}</td>    
                                     <td>{val.preferredFullName}</td>
                                     <td>{val.jobTitleName}</td>

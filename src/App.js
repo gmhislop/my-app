@@ -5,8 +5,9 @@ import Match from './pages/Match';
 import Caregivers from './pages/Caregivers';
 import Contact from './pages/Contact';
 import Bookings from './pages/Bookings';
+import Login from './pages/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Form from './Form';
+// import Form from './Form';
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <Switch>
       <Route path="/pages/caregivers" exact component={Caregivers} />
       <Route path="/pages/bookings" component={Bookings} />
-      <Route path="/pages/login" exact component={Form} />
+      <Route path="/pages/login" component={Login} />
+      {/* <Route path="/pages/login" exact component={Form} /> */}
       <Route path='./'/>     
       <Route path=".pages/" exact component={Home} />
       <Route path="/pages/match" component={Match} />

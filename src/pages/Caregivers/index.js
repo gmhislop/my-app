@@ -38,7 +38,7 @@ function Caregivers() {
                                 return (
                                     <tr key={key}>
                                     <td>{val.userId}</td>    
-                                    <td>{val.thumbnail}</td>    
+                                    <td><img src={val.thumbnail} alt="Profile here"></img></td>    
                                     <td>{val.preferredFullName}</td>
                                     <td>{val.jobTitleName}</td>
                                     <td>{val.email}</td>

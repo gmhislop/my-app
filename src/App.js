@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Home from './pages/Home'
+import Dashboard from './pages/Dashboard'
 import Match from './pages/Match';
 import Caregivers from './pages/Caregivers';
 import Contact from './pages/Contact';
@@ -20,7 +20,7 @@ function App() {
       <Route path="/pages/login" component={Login} />
       {/* <Route path="/pages/login" exact component={Form} /> */}
       <Route path='./'/>     
-      <Route path=".pages/" exact component={Home} />
+      <Route path=".pages/" exact component={Dashboard} />
       <Route path="/pages/match" component={Match} />
       <Route path=".pages/contact" component={Contact} />
       </Switch>

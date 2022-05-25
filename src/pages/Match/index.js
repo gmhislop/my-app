@@ -73,7 +73,7 @@ function Match() {
                                         <td>{val.department}</td>
                                         <td>{val.date}</td>
                                         <td>{val.time}</td>
-                                        <button className='tableButton'>Confirm</button>
+                                        <td><button className='tableButton'>Confirm</button></td>
                                     </tr>
                                 )
                             })}

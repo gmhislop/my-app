@@ -3,7 +3,7 @@ import './index.css';
 import { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Navbar() {
 	const [ sidebar, setSidebar ] = useState(false);
@@ -13,15 +13,18 @@ function Navbar() {
 	return (
 		<div className={sidebar ? 'body body-pd' : 'body'}>
 			<header className={sidebar ? 'header body-pd' : 'header'}>
-				<div className="header__toggle">
+				{/* <div className="header__toggle">
 					<Link to="#" onClick={showSidebar}>
 						{sidebar ? <FaIcons.FaWindowClose /> : <FaIcons.FaBars />}
 					</Link>
-				</div>
+				</div> */}
 			</header>
 			<div className={sidebar ? 'l-navbar show' : 'l-navbar'}>
 				<nav className="nav">
 					<div>
+						<div className="nav__logo" onClick={showSidebar}>
+							{sidebar ? <FaIcons.FaWindowClose color="white" /> : <FaIcons.FaBars color="white" />}
+						</div>
 						<a href="/" className="nav__logo">
 							{/* <AiIcons.AiOutlineHome className='nav__logo-icon' /> */}
 							{/* put logo.svg here */}
@@ -49,7 +52,10 @@ function Navbar() {
 							<span className="nav__logo-name">Logo</span>
 						</a>
 						<div className="nav__list">
-							<a href="/" className="nav__link">
+							<a
+								href="/pages/dashboard"
+								className={location.pathname === '/pages/dashboard' ? 'nav__link active' : 'nav__link'}
+							>
 								<AiIcons.AiOutlineDashboard className="nav__icon" />
 								<span className="nav__name">Dashboard</span>
 							</a>

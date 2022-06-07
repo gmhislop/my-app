@@ -23,6 +23,7 @@ function Login() {
 				console.log(json, 'API Response');
 				if (json.accessToken) {
 					localStorage.setItem('token', json.accessToken);
+					localStorage.setItem('user', JSON.stringify(json));
 					window.location.href = '/pages/bookings';
 				} else {
 					setError(json.error);

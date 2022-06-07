@@ -13,7 +13,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-    <Sidebar/>
     <Router>
       <Switch>
       <Route path="/pages/caregivers" exact component={Caregivers} />
@@ -21,7 +20,7 @@ function App() {
       <Route path="/pages/login" component={Login} />
       {/* <Route path="/pages/login" exact component={Form} /> */}
       <Route path='./'/>     
-      <Route path=".pages/" exact component={Dashboard} />
+      <Route path="/pages/dashboard" exact component={Dashboard} />
       <Route path="/pages/match" component={Match} />
       <Route path=".pages/contact" component={Contact} />
       </Switch>
